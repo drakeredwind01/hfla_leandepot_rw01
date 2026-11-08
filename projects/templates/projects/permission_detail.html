@@ -1,0 +1,12 @@
+{% extends 'projects/base.html' %}
+{% block content %}
+<h1>{{ permission.name }}</h1>
+<h2>Members &rarr; Projects</h2>
+<ul>
+  <li><a href="/members/{{ permission.member.pk }}/">{{ permission.member.name }}</a>
+    <ul>
+      <li><a href="/projects/{{ permission.project.pk }}/">{{ permission.project.name }}</a></li>
+    </ul>
+  </li>
+</ul>
+{% endblock %}
